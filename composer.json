@@ -1,0 +1,17 @@
+{
+    "name": "aadarsh/download-version",
+    "autoload": {
+        "psr-4": {
+            "Aadarsh\\DownloadVersion\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ImAadarsh",
+            "email": "aadarshkavita@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
