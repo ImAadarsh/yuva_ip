@@ -30,6 +30,17 @@
         color: rgb(49, 45, 45)!important;
         
     }
+    .sticky-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.sticky-wrapper.scrolled {
+    background-color: #fff; /* Change background color when scrolled */
+}
+
 </style>
     <!--==============================
 Google Fonts
@@ -80,8 +91,11 @@ All CSS File
         <div class="sticky-wrapper"> <!-- Main Menu Area -->
             <div class="container">
                 <div class="menu-area">
-                    <div class="header-logo"> <a href="index.html"><img style="height: 110px;" src="assets/images/Logos2.png"
-                                alt="YUVA"></a> </div>
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img id="header-logo" style="height: 110px;" src="assets/images/Logo_white.png" alt="YUVA">
+                        </a>
+                    </div>
                     <div class="menu-area-wrap">
                         <nav class="main-menu d-none d-lg-block">
                             <ul>
@@ -95,13 +109,16 @@ All CSS File
                         <p class="header-notice"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Join
                             us to reimagine the future of education</p>
                     </div>
-                    <div class="header-button"> <a href="#register-sec" class="th-btn style3 d-xl-block d-none"><i
-                                class="fas fa-heart me-2"></i> Participate Now</a> <button type="button"
-                            class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button> </div>
+                    <div class="header-button">
+                        <a href="#register-sec" class="th-btn style3 d-xl-block d-none"><i
+                                class="fas fa-heart me-2"></i> Participate Now</a>
+                        <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
-    </header><!--============================== Hero Area ==============================-->
+    </header>
+    <!--============================== Hero Area ==============================-->
     <div class="th-hero-wrapper hero-3" id="hero">
         <div style="z-index: 99999 !important;" class="shape-mockup hero-shape-3-1 d-lg-block d-none" data-top="20%"
             data-left="50%">
@@ -838,6 +855,21 @@ Partner Area
             All Js File
             ============================== -->
     <!-- Jquery -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const logo = document.getElementById('header-logo');
+            const stickyWrapper = document.querySelector('.sticky-wrapper');
+    
+            if (window.scrollY > 50) { // Adjust this value as needed
+                logo.src = 'assets/images/Logo.png'; // Sticky logo
+                stickyWrapper.classList.add('scrolled');
+            } else {
+                logo.src = 'assets/images/Logo_white.png'; // Normal logo
+                stickyWrapper.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <!-- Swiper Js -->
     <script src="assets/js/swiper-bundle.min.js"></script>
