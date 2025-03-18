@@ -74,7 +74,7 @@ All CSS File
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"> <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo"> <a href="index.html"><img
-                        style="width: 312px !important; height: 100px !important;" src="assets/images/Logo.png" alt="YUVA"></a>
+                        style=" height: 100px !important;" src="assets/images/Logo.png" alt="YUVA"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -766,15 +766,52 @@ Partner Area
         window.addEventListener('scroll', function() {
             const logo = document.getElementById('header-logo');
             const stickyWrapper = document.querySelector('.sticky-wrapper');
-    
-            if (window.scrollY > 50) { // Adjust this value as needed
-                logo.src = 'assets/images/Logo.png'; // Sticky logo
-                stickyWrapper.classList.add('scrolled');
+            
+            // Check if window width is 990px or greater
+            if (window.innerWidth >= 990) {
+                // Desktop behavior - change logo based on scroll
+                if (window.scrollY > 50) {
+                    logo.src = 'assets/images/Logo.png'; // Sticky logo
+                    stickyWrapper.classList.add('scrolled');
+                } else {
+                    logo.src = 'assets/images/Logo_white.png'; // Normal logo
+                    stickyWrapper.classList.remove('scrolled');
+                }
             } else {
-                logo.src = 'assets/images/Logo_white.png'; // Normal logo
-                stickyWrapper.classList.remove('scrolled');
+                // Mobile behavior - always use the colored logo
+                logo.src = 'assets/images/Logo.png';
             }
         });
+        
+        // Also check on page load and resize
+        window.addEventListener('load', function() {
+            const logo = document.getElementById('header-logo');
+            
+            // Set initial logo based on screen width
+            if (window.innerWidth < 990) {
+                logo.src = 'assets/images/Logo.png';
+            }
+        });
+        
+        window.addEventListener('resize', function() {
+            const logo = document.getElementById('header-logo');
+            const stickyWrapper = document.querySelector('.sticky-wrapper');
+            
+            if (window.innerWidth < 990) {
+                // Mobile view - always use colored logo
+                logo.src = 'assets/images/Logo.png';
+            } else {
+                // Desktop view - set logo based on current scroll position
+                if (window.scrollY > 50) {
+                    logo.src = 'assets/images/Logo.png';
+                    stickyWrapper.classList.add('scrolled');
+                } else {
+                    logo.src = 'assets/images/Logo_white.png';
+                    stickyWrapper.classList.remove('scrolled');
+                }
+            }
+        });
+        
     </script>
     
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
