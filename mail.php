@@ -23,7 +23,7 @@ if ($conn->connect_error) {
     die(json_encode(['message' => 'Connection failed: ' . $conn->connect_error, 'success' => false]));
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['full_name']) && isset($_POST['email']) && isset($_POST['mobile'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['full_name']) && isset($_POST['email']) && isset($_POST['phone'])) {
     // Get form data and sanitize inputs
     $full_name = filter_var($_POST['full_name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
