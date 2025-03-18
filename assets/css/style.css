@@ -308,7 +308,7 @@ h5,
 .h6,
 h6 {
   font-family: var(--title-font);
-  color: var(--title-color);
+  color: black;
   text-transform: none;
   font-weight: 700;
   line-height: 1.4;
@@ -3149,6 +3149,8 @@ textarea.is-invalid {
   margin-top: -0.25em;
   text-transform: capitalize;
   font-weight: 800;
+  color: #000000;
+
 }
 
 .sub-title {
@@ -3352,6 +3354,7 @@ hr.title-line {
 @media (max-width: 1199px) {
   .sub-title {
     margin-bottom: 20px;
+    color: #000000;
   }
   .shadow-title {
     font-size: 64px;
@@ -3359,6 +3362,7 @@ hr.title-line {
   .title-area,
   .sec-title {
     --section-title-space: 60px;
+    color: #000000;
   }
   .title-area.mb-45,
   .sec-title.mb-45 {
@@ -3385,6 +3389,7 @@ hr.title-line {
   .title-area,
   .sec-title {
     --section-title-space: 50px;
+    color: #000000;
   }
   .title-area.mb-45,
   .sec-title.mb-45 {
@@ -6636,7 +6641,7 @@ ol.wp-block-rss {
 }
 
 .about-logo {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .th-widget-about {
