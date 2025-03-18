@@ -16537,14 +16537,14 @@ span.select2-selection.select2-selection--single:focus {
 
 .faq-img-box2 .img1 {
   height: 100%;
-  -webkit-filter: grayscale(9);
-          filter: grayscale(9);
+  /* -webkit-filter: grayscale(9);
+          filter: grayscale(9); */
 }
 
 .faq-img-box2 .img1 img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  /* object-fit: fit; */
 }
 
 .faq-img-box2 .faq-img-shape {
