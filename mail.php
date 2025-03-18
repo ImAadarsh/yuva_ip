@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['full_name']) && isset(
     // Get form data and sanitize inputs
     $full_name = filter_var($_POST['full_name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $mobile = filter_var($_POST['mobile'], FILTER_SANITIZE_STRING);
+    $mobile = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
     $school = filter_var($_POST['school'], FILTER_SANITIZE_STRING);
     $grade = filter_var($_POST['grade'], FILTER_SANITIZE_STRING);
     $topic = filter_var($_POST['topic'], FILTER_SANITIZE_STRING);
