@@ -1,0 +1,636 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>YUVA - Dialogue Venues Across India</title>
+    <meta name="author" content="Endeavour Digital">
+    <meta name="description" content="YUVA Dialogue Venues - Regional Symposia Locations Across India">
+    <meta name="keywords" content="YUVA, Student Dialogue, Venues, Educational Transformation, Youth Leadership">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/Logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/Logo.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/Logo.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        .sec-title {
+            color: rgb(49, 45, 45) !important;
+        }
+
+        .box-title a {
+            color: rgb(49, 45, 45) !important;
+        }
+
+        .team-desig a {
+            color: rgb(49, 45, 45) !important;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .sticky-wrapper.scrolled {
+            background-color: #fff;
+        }
+
+        .venue-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+
+        .venue-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .venue-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .venue-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .venue-card:hover .venue-image img {
+            transform: scale(1.05);
+        }
+
+        .venue-content {
+            padding: 25px;
+        }
+
+        .venue-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .venue-details {
+            margin-bottom: 15px;
+        }
+
+        .venue-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .venue-detail i {
+            color: var(--theme-color);
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .venue-dates {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background-color: var(--theme-color);
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .hero-bg-venues {
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-bg-venues:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+        }
+    </style>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!--============================== Preloader ==============================-->
+    <div class="preloader ">
+        <div class="preloader-inner"> <span class="loader"> <span class="loading-text">YUVA</span> </span> </div>
+    </div>
+
+    <!--============================== Mobile Menu ============================== -->
+    <div class="th-menu-wrapper">
+        <div class="th-menu-area text-center"> <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo"> <a href="index.html"><img style="height: 100px !important;"
+                        src="assets/images/Logo.png" alt="YUVA"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-sec">About YUVA</a></li>
+                    <li><a href="venues.html">Venues</a></li>
+                    <li><a href="index.html#themes-sec">Themes</a></li>
+                    <li><a href="index.html#structure-sec">Structure</a></li>
+                    
+                    <li><a href="index.html#register-sec">Participate</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--============================== Header Area ==============================-->
+    <header class="th-header header-layout2">
+        <div class="sticky-wrapper">
+            <div class="container">
+                <div class="menu-area">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img id="header-logo" style="height: 110px;" src="assets/images/Logo.png" alt="YUVA">
+                        </a>
+                    </div>
+                    <div class="menu-area-wrap">
+                        <nav class="main-menu d-none d-lg-block">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about-sec">About YUVA</a></li>
+                                <li><a href="index.html#themes-sec">Themes</a></li>
+                                <li><a href="index.html#structure-sec">Structure</a></li>
+                                <li><a href="venues.html">Venues</a></li>
+                                <li><a href="index.html#register-sec">Participate</a></li>
+                            </ul>
+                        </nav>
+                        <p class="header-notice"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Join
+                            us to reimagine the future of education</p>
+                    </div>
+                    <div class="header-button">
+                        <a href="index.html#register-sec" class="th-btn style3 d-xl-block d-none"><i
+                                class="fa-solid fa-bolt"></i> Participate Now</a>
+                        <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i
+                                class="far fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--============================== Hero Area ==============================-->
+    <div class="th-hero-wrapper hero-bg-venues" data-bg-src="assets/images/bg3.png" id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-style3 text-center py-5">
+                        <span class="sub-title after-none"><i class="far fa-solid fa-bolt text-theme"></i> YUVA Dialogue 2025</span>
+                        <h1 class="hero-title text-white">Regional Symposia Venues</h1>
+                        <p class="hero-text text-white px-xl-5 mx-xl-5">Join us at these prestigious locations across India where the future of education will be reimagined through student-led intellectual inquiry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--============================== Venues Area ==============================-->
+    <section class="space" id="venues-sec">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title after-none before-none"><i class="far fa-solid fa-bolt text-theme"></i> Dialogue Venues</span>
+                <h2 class="sec-title">Where Student Voices Will Shape the Future</h2>
+                <p class="sec-text mb-5">Our regional symposia will take place in these key cities across India, bringing together young minds in vibrant intellectual hubs</p>
+            </div>
+
+            <div class="row gy-4">
+                <!-- Delhi Venue -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="venue-card">
+                        <div class="venue-image">
+                            <img src="cities/delhi.png" alt="Delhi Venue">
+                        </div>
+                        <div class="venue-content">
+                            <span class="venue-dates">March 15-17, 2025</span>
+                            <h3 class="venue-title">Delhi</h3>
+                            <div class="venue-details">
+                                <div class="venue-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>India Habitat Centre, Lodhi Road</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>150 Participants</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Focus: Technological Renaissance</span>
+                                </div>
+                            </div>
+                            <a href="index.html#register-sec" class="th-btn style3">Register for Delhi <i class="fas fa-arrow-up-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mumbai Venue -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="venue-card">
+                        <div class="venue-image">
+                            <img src="cities/mumbai.png" alt="Mumbai Venue">
+                        </div>
+                        <div class="venue-content">
+                            <span class="venue-dates">April 5-7, 2025</span>
+                            <h3 class="venue-title">Mumbai</h3>
+                            <div class="venue-details">
+                                <div class="venue-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Nehru Centre, Worli</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>180 Participants</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Focus: Decoding the Learning Mind</span>
+                                </div>
+                            </div>
+                            <a href="index.html#register-sec" class="th-btn style3">Register for Mumbai <i class="fas fa-arrow-up-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bangalore Venue -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="venue-card">
+                        <div class="venue-image">
+                            <img src="cities/bangalore.png" alt="Bangalore Venue">
+                        </div>
+                        <div class="venue-content">
+                            <span class="venue-dates">April 19-21, 2025</span>
+                            <h3 class="venue-title">Bangalore</h3>
+                            <div class="venue-details">
+                                <div class="venue-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Indian Institute of Science</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>160 Participants</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Focus: Reimagining Classroom Ecosystems</span>
+                                </div>
+                            </div>
+                            <a href="index.html#register-sec" class="th-btn style3">Register for Bangalore <i class="fas fa-arrow-up-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolkata Venue -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="venue-card">
+                        <div class="venue-image">
+                            <img src="cities/kolkata.png" alt="Kolkata Venue">
+                        </div>
+                        <div class="venue-content">
+                            <span class="venue-dates">May 3-5, 2025</span>
+                            <h3 class="venue-title">Kolkata</h3>
+                            <div class="venue-details">
+                                <div class="venue-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Science City Auditorium</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>140 Participants</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Focus: Adaptive & Inclusive Learning</span>
+                                </div>
+                            </div>
+                            <a href="index.html#register-sec" class="th-btn style3">Register for Kolkata <i class="fas fa-arrow-up-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gwalior Venue -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="venue-card">
+                        <div class="venue-image">
+                            <img src="cities/gwalior.png" alt="Gwalior Venue">
+                        </div>
+                        <div class="venue-content">
+                            <span class="venue-dates">May 17-19, 2025</span>
+                            <h3 class="venue-title">Gwalior</h3>
+                            <div class="venue-details">
+                                <div class="venue-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Atal Bihari Vajpayee Convention Centre</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>120 Participants</span>
+                                </div>
+                                <div class="venue-detail">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Focus: Educational Policy Innovation</span>
+                                </div>
+                            </div>
+                            <a href="index.html#register-sec" class="th-btn style3">Register for Gwalior <i class="fas fa-arrow-up-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- National Summit -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="venue-card" style="background-color: #f8f9fa;">
+                        <div class="venue-content text-center py-5">
+                            <div class="mb-4">
+                                <img src="assets/images/Logo.png" alt="YUVA Logo" style="height: 120px;">
+                            </div>
+                            <span class="venue-dates" style="background-color: #8B008B;">June 15-17, 2025</span>
+                            <h3 class="venue-title">National Summit</h3>
+                            <div class="venue-details text-center">
+                                <p class="mb-3">Following the regional symposia, selected delegates will convene for the National Summit in New Delhi</p>
+                                <div class="venue-detail justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <span>Culmination of Regional Dialogues</span>
+                                </div>
+                                <div class="venue-detail justify-content-center">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Policy Recommendations</span>
+                                </div>
+                            </div>
+                            <a href="index.html#register-sec" class="th-btn">Join the Movement <i class="fas fa-arrow-up-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--============================== Map Section ==============================-->
+    <section class="space bg-smoke">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title after-none before-none"><i class="far fa-solid fa-bolt text-theme"></i> National Reach</span>
+                <h2 class="sec-title">Dialogue Across India</h2>
+                <p class="sec-text mb-5">Our regional symposia span the length and breadth of India, ensuring diverse representation and perspectives</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="p-4 bg-white rounded-4 shadow-sm">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15021764.978134864!2d73.71671769557302!3d20.77118574882789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1691584124084!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--============================== Venue FAQ Area ==============================-->
+    <div class="space overflow-hidden faq-area-2">
+        <div class="container">
+            <div class="row gy-60 gx-60">
+                <div class="col-xl-6">
+                    <div class="faq-wrap2">
+                        <div class="title-area"> 
+                            <span class="sub-title after-none before-none"><i class="far fa-solid fa-bolt text-theme"></i> Venue FAQs</span>
+                            <h2 class="sec-title" style="color:black;">Questions About Attending?</h2>
+                        </div>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-card style2">
+                                <div class="accordion-header" id="collapse-item-1"> 
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                        How do I choose which venue to attend?
+                                    </button> 
+                                </div>
+                                <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">You can select the venue based on geographic proximity, thematic focus that aligns with your interests, or specific dates that work with your schedule. While each venue has a unique focus area, all thematic discussions will be available at each location.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-card style2">
+                                <div class="accordion-header" id="collapse-item-2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                                        Is accommodation provided for attendees?
+                                    </button>
+                                </div>
+                                <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">Accommodation is not included in the standard registration. However, we have partnered with nearby hotels to provide discounted rates for YUVA participants. Details about accommodation options will be shared upon successful registration.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-card style2">
+                                <div class="accordion-header" id="collapse-item-3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                                        How can I be selected for the National Summit?
+                                    </button>
+                                </div>
+                                <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">Delegates for the National Summit will be selected based on their contributions during the regional symposia. This includes the quality of their position papers, active participation in discussions, innovative ideas presented, and collaborative spirit demonstrated. Each regional symposium will nominate representatives to attend the National Summit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="contact-form-box">
+                        <h3 class="form-title">Have Questions About Venues?</h3>
+                        <p class="form-text">Contact our venue coordination team for specific inquiries about locations, facilities, or accessibility</p>
+                        <form class="contact-form ajax-contact">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                </div>
+                                <div class="col-12 form-group">
+                                    <select class="form-select" name="venue" id="venue">
+                                        <option selected disabled>Select Venue</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Gwalior">Gwalior</option>
+                                        <option value="National">National Summit</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <textarea name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-12 form-btn">
+                                    <button class="th-btn">Send Message <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--============================== Footer Area ==============================-->
+    <footer class="footer-wrapper footer-layout2">
+        <div class="widget-area space-top">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="index.html"><img style="width: 140px; height: 110px; " src="assets/images/Logos2.png" alt="YUVA"></a>
+                                </div>
+                                <p class="about-text mb-3">YUVA is a catalytic platform where students from grades 10 to
+                                    12 engage in high-order discourse, articulate visionary ideas, and contribute novel
+                                    perspectives to the reimagination of learning spaces.
+                                </p>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <p class="box-text">Contact us:</p>
+                                        <h4 class="box-title"><a style="color: #fff !important;" href="tel:+919876543210">+91 9876543210</a></h4>
+                                    </div>
+                                </div>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme2">
+                                        <i class="fal fa-envelope-open"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <p class="box-text">Email us:</p>
+                                        <h4 class="box-title"><a style="color: #fff !important;" href="mailto:team@ipnindia.in">team@ipnindia.in</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-auto">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick Links</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html#about-sec">About YUVA</a></li>
+                                    <li><a href="index.html#themes-sec">Thematic Areas</a></li>
+                                    <li><a href="index.html#structure-sec">Engagement Structure</a></li>
+                                    <li><a href="venues.html">Dialogue Venues</a></li>
+                                    <li><a href="index.html#team-sec">Youth Visionaries</a></li>
+                                    <li><a href="index.html#register-sec">Participation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget newsletter-widget footer-widget">
+                            <h3 class="widget_title">Newsletter</h3>
+                            <p class="footer-text mb-4">Subscribe to our newsletter to receive updates about YUVA
+                                Student Dialogue 2025 and future educational initiatives.</p>
+                            <form class="newsletter-form">
+                                <div class="form-group style-dark">
+                                    <input class="form-control" type="email" placeholder="Enter your email" required="">
+                                </div>
+                                <button type="submit" class="th-btn style5"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                            <div class="th-social style6">
+                                <a href="https://www.facebook.com/IPNFORUM"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://x.com/IPNFoundation/"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/company/ipn-indian-principal-s-network/"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/IPNFORUM"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap bg-theme text-center">
+            <div class="container">
+                <p class="copyright-text">Copyright 2025 <a href="index.html">YUVA Student Dialogue.</a> All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg>
+    </div>
+
+    <!--==============================
+    All Js File
+    ============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const logo = document.getElementById('header-logo');
+            const stickyWrapper = document.querySelector('.sticky-wrapper');
+            
+            // Check scroll position
+            if (window.scrollY > 50) {
+                logo.src = 'assets/images/Logo.png'; // Sticky logo
+                stickyWrapper.classList.add('scrolled');
+            } else {
+                logo.src = 'assets/images/Logo.png'; // Normal logo (already colored since this is an inner page)
+                stickyWrapper.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html> 
