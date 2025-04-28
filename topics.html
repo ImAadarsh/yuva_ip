@@ -1,0 +1,412 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>YUVA - Topics | Nationwide Student Dialogue on Future Learning</title>
+    <meta name="author" content="Endeavour Digital">
+    <meta name="description" content="YUVA - Young United Voice for Action: Reimagining Education">
+    <meta name="keywords" content="YUVA, Student Dialogue, Future Learning, Education Topics, Youth Leadership">
+    <meta name="robots" content="INDEX,FOLLOW"> <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/Logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/Logo.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/Logo.png">
+    <meta name="theme-color" content="#ffffff">
+<style>
+    .sec-title{
+        color: rgb(49, 45, 45) !important;
+    }
+    .box-title a{
+        color: rgb(49, 45, 45)!important;
+    }
+    .team-desig a{
+        color: rgb(49, 45, 45)!important;
+    }
+    .sticky-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 1000; /* Ensure it stays above other content */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+    .sticky-wrapper.scrolled {
+        background-color: #fff; /* Change background color when scrolled */
+    }
+    .topic-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    .topic-list li {
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        border-left: 4px solid var(--theme-color);
+        transition: all 0.3s ease;
+    }
+    .topic-list li:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    .theme-group {
+        margin-bottom: 50px;
+    }
+    .theme-heading {
+        position: relative;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+    .theme-heading:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 3px;
+        background: var(--theme-color);
+    }
+
+    
+    /* Topic item colors */
+    .topic-list li:nth-child(5n+1) {
+        border-left-color: #ff5158;
+    }
+    .topic-list li:nth-child(5n+2) {
+        border-left-color: #e3be63;
+    }
+    .topic-list li:nth-child(5n+3) {
+        border-left-color: #6ac1ff;
+    }
+    .topic-list li:nth-child(5n+4) {
+        border-left-color: #7ed957;
+    }
+    .topic-list li:nth-child(5n+5) {
+        border-left-color: #9c77ff;
+    }
+</style>
+    <!--==============================
+Google Fonts
+============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"><!--==============================
+All CSS File
+============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body><!--============================== Preloader ==============================-->
+    <div class="preloader ">
+        <div class="preloader-inner"> <span class="loader"> <span class="loading-text">YUVA</span> </span> </div>
+    </div><!--============================== Mobile Menu ============================== -->
+    <div class="th-menu-wrapper">
+        <div class="th-menu-area text-center"> <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo"> <a href="index.html"><img
+                        style=" height: 100px !important;" src="assets/images/Logo.png" alt="YUVA"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-sec">About YUVA</a></li>
+                    <li><a href="venues.html">Host Cities</a></li>
+                    <li><a href="index.html#journey-sec">Yuva Journey</a></li>
+                    <li><a href="index.html#themes-sec">Themes</a></li>
+                    <li><a href="index.html#partner-sec-1">Partner</a></li>
+                    <li><a href="topics.html">Topic Guides</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--============================== Header Area ==============================-->
+    <header class="th-header header-layout2">
+        <div class="sticky-wrapper"> <!-- Main Menu Area -->
+            <div class="container">
+                <div class="menu-area">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img id="header-logo" style="height: 110px;" src="assets/images/Logo.png" alt="YUVA">
+                        </a>
+                    </div>
+                    <div class="menu-area-wrap">
+                        <nav class="main-menu d-none d-lg-block">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about-sec">About YUVA</a></li>
+                                <li><a href="venues.html">Host Cities</a></li>
+                                <li><a href="index.html#journey-sec">Yuva Journey</a></li>
+                                <li><a href="index.html#themes-sec">Themes</a></li>
+                                <li><a href="index.html#partner-sec-1">Partner</a></li>
+                                <li class="active"><a href="topics.html">Topic Guides</a></li>
+                            </ul>
+                        </nav>
+                        <p class="header-notice"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Join
+                            us to reimagine the future of education</p>
+                    </div>
+                    <div class="header-button">
+                        <a href="index.html#register-sec" class="th-btn style3 d-xl-block d-none"><i
+                                class="fa-solid fa-bolt"></i> Participate Now</a>
+                        <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--============================== Hero Area ==============================-->
+    <div class="th-hero-wrapper hero-bg-venues" style="padding-top: 100px !important;" id="hero">
+
+    </div>
+
+    <!-- Topics Section -->
+    <section class="space">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title after-none before-none"><i class="far fa-solid fa-bolt text-theme"></i> Thematic Exploration</span>
+                <h2 class="sec-title">YUVA Discussion Topics</h2>
+                <p class="sec-text mb-5">Explore our comprehensive list of thought-provoking topics organized by themes to inspire meaningful dialogue and innovative ideas for educational transformation.</p>
+            </div>
+
+            <div class="row">
+                <!-- Education & Innovation -->
+                <div class="col-lg-6 theme-group">
+                    <h3 class="theme-heading ">Education & Innovation</h3>
+                    <ul class="topic-list">
+                        <li>Innovation in Education: How AI Can Transform the Classroom Experience</li>
+                        <li>If I Could Redesign My School: What Would Change and Why?</li>
+                        <li>Education for Sustainability: The Role of Students</li>
+                        <li>Are smart classrooms smarter than traditional ones?</li>
+                        <li>Is the NEP (National Education Policy) enough to transform Indian education?</li>
+                        <li>Classroom & Pedagogical Transformation: Are traditional lectures out-dated?</li>
+                        <li>Should education be more skill-based than subject-based?</li>
+                        <li>The Ideal School: What Would It Look Like?</li>
+                        <li>Digital vs. Real Books: What's the Future of Reading in Schools?</li>
+                        <li>Should every school have a debate or public speaking club?</li>
+                    </ul>
+                </div>
+
+                <!-- Technology & Digital Life -->
+                <div class="col-lg-6 theme-group">
+                    <h3 class="theme-heading">Technology & Digital Life</h3>
+                    <ul class="topic-list">
+                        <li>Is Social Media Strengthening or Weakening Society?</li>
+                        <li>What Defines Human Progress: Technology or Humanity?</li>
+                        <li>Ethics & Technology: Should Robots Be Allowed to Replace Humans in Jobs?</li>
+                        <li>Society & Human Behaviour: Are We Becoming Too Dependent on Technology?</li>
+                        <li>Digital Life & Technology: What If the Internet Went Down for a Week?</li>
+                        <li>Digital Life & Technology: Is Virtual Reality Replacing Real Life?</li>
+                        <li>Should There Be Limits on Artificial Intelligence?</li>
+                        <li>What Does It Mean to Be a Responsible Digital Citizen?</li>
+                        <li>Is Online Learning Better Than Classroom Learning?</li>
+                        <li>Economy & Innovation: Is Cryptocurrency the Money of the Future?</li>
+                    </ul>
+                </div>
+
+                <!-- Identity, Culture & Values -->
+                <div class="col-lg-6 theme-group">
+                    <h3 class="theme-heading bg-theme3">Identity, Culture & Values</h3>
+                    <ul class="topic-list">
+                        <li>Identity, Culture & Values: What Does It Mean to Be a Responsible Indian Today?</li>
+                        <li>Identity, Culture & Values: Should We Celebrate Globalization or Protect Local Culture?</li>
+                        <li>Identity, Culture & Values: How Can We Preserve Our Languages in a Globalized World?</li>
+                        <li>Character Over Competition: What Truly Defines Success?</li>
+                        <li>Values & Leadership: What Makes a Good Leader in School and Life?</li>
+                        <li>Celebrating Diversity: Why Every Culture Matters in Classrooms</li>
+                        <li>What Does It Mean to Be 'Woke' in Today's World?</li>
+                        <li>Are Traditional Indian Sports Losing Their Importance?</li>
+                        <li>Does the World Truly Understand the Spiritual Essence of Yoga?</li>
+                        <li>How Can India Lead the World in Yoga, Wellness, and Peace building?</li>
+                    </ul>
+                </div>
+
+                <!-- Educational Assessment & Excellence -->
+                <div class="col-lg-6 theme-group">
+                    <h3 class="theme-heading bg-theme4">Educational Assessment & Excellence</h3>
+                    <ul class="topic-list">
+                        <li>Exams vs. Continuous Assessment: What Works Better?</li>
+                        <li>Are Exams the Right Way to Measure Intelligence?</li>
+                        <li>Can Exams Measure Real Intelligence and Potential?</li>
+                        <li>Should grades define a student's ability?</li>
+                        <li>Are oral presentations more powerful than written tests?</li>
+                        <li>The Ideal Teacher: What Every Student Needs</li>
+                        <li>How Much Teacher Training Is Important?</li>
+                        <li>How can parents and schools work together better? Family Quiz Show is Useful?</li>
+                        <li>Confidence vs. Comparison: The Real Struggle of Gen Z Students</li>
+                        <li>Why Time Management Is a Superpower for Students</li>
+                    </ul>
+                </div>
+
+                <!-- Economy, Policy & Governance -->
+                <div class="col-lg-6 theme-group">
+                    <h3 class="theme-heading bg-theme5">Economy, Policy & Governance</h3>
+                    <ul class="topic-list">
+                        <li>If I Were the Education Minister for One Day</li>
+                        <li>Economy & Innovation: Do Start-ups Represent the Future of India's Economy?</li>
+                        <li>Justice, Rights & Equality: Freedom vs. Responsibility: What Should Come First?</li>
+                        <li>Justice, Rights & Equality: Do Laws Need to Change with Changing Generations?</li>
+                        <li>How should governments fund inclusive education better?</li>
+                        <li>Learning for Tomorrow: Entrepreneurship in Schools: Preparing for the Real World</li>
+                        <li>Can entrepreneurship be taught in school?</li>
+                        <li>Should school offer Career training Program Compulsory?</li>
+                        <li>Are girls encouraged enough to take up STEM subjects?</li>
+                        <li>What social issue would you solve if given the power?</li>
+                    </ul>
+                </div>
+
+                <!-- Environment & Global Citizenship -->
+                <div class="col-lg-6 theme-group">
+                    <h3 class="theme-heading bg-theme6">Environment & Global Citizenship</h3>
+                    <ul class="topic-list">
+                        <li>Is Climate Changing the Greatest Threat to Humanity?</li>
+                        <li>Environment: Should Plastic Be Banned Completely?</li>
+                        <li>Youth Vision & Global Citizenship: My India, My Responsibility: What Can I Do Today</li>
+                        <li>Youth Vision & Global Citizenship: Is Global Peace a Dream or a Goal?</li>
+                        <li>Why Should Yoga Be Part of Every Student's Daily Routine?</li>
+                        <li>Is Winning More Important Than Participation?</li>
+                        <li>What would your dream school look like?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-4 pt-3">
+                <a href="index.html#register-sec" class="th-btn">Participate in the Discussion <i class="fas fa-arrow-up-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!--==============================
+    Footer Area
+    ==============================-->
+    <footer class="footer-wrapper footer-layout2">
+        <div class="widget-area space-top">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="index.html"><img style="width: 140px; height: 110px; " src="assets/images/Logos2.png"
+                                            alt="YUVA"></a>
+                                </div>
+                                <p class="about-text mb-3">YUVA is a catalytic platform where students from grades 10 to
+                                    12 engage in high-order discourse, articulate visionary ideas, and contribute novel
+                                    perspectives to the reimagination of learning spaces.
+                                </p>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <p class="box-text">Contact us:</p>
+                                        <h4 class="box-title"><a style="color: #fff !important;" href="tel:+919876543210">+91 9876543210</a></h4>
+                                    </div>
+                                </div>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme2">
+                                        <i class="fal fa-envelope-open"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <p class="box-text">Email us:</p>
+                                        <h4 class="box-title"><a style="color: #fff !important;" href="mailto:team@ipnindia.in">team@ipnindia.in</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-auto">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick Links</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html#about-sec">About YUVA</a></li>
+                                    <li><a href="index.html#themes-sec">Thematic Areas</a></li>
+                                    <li><a href="index.html#journey-sec">Journey of YUVA</a></li>
+                                    <li><a href="index.html#team-sec">Youth Visionaries</a></li>
+                                    <li><a href="index.html#register-sec">Participation</a></li>
+                                    <li><a href="topics.html">Topic Guides</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget newsletter-widget footer-widget">
+                            <h3 class="widget_title">Newsletter</h3>
+                            <p class="footer-text mb-4">Subscribe to our newsletter to receive updates about YUVA
+                                Student Dialogue 2025 and future educational initiatives.</p>
+                            <form class="newsletter-form">
+                                <div class="form-group style-dark">
+                                    <input class="form-control" type="email" placeholder="Enter your email" required="">
+                                </div>
+                                <button type="submit" class="th-btn style5"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                            <div class="th-social style6">
+                                <a href="https://www.facebook.com/IPNFORUM"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://x.com/IPNFoundation/"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/company/ipn-indian-principal-s-network/"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/IPNFORUM"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap bg-theme text-center">
+            <div class="container">
+                <p class="copyright-text">Copyright 2025 <a href="index.html">YUVA Student Dialogue.</a> All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg>
+    </div>
+
+    <!--==============================
+            All Js File
+            ============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html> 
