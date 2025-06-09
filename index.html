@@ -68,9 +68,18 @@ All CSS File
 </head>
 
 <body><!--============================== Preloader ==============================-->
-    <div class="preloader ">
-        <div class="preloader-inner"> <span class="loader"> <span class="loading-text">YUVA</span> </span> </div>
-    </div><!--============================== Mobile Menu ============================== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--============================== Mobile Menu ============================== -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"> <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo"> <a href="index.html"><img
@@ -225,7 +234,7 @@ All CSS File
                         <span class="sub-title after-none before-none"><i class="text-theme far fa-solid fa-bolt"></i> About
                             YUVA</span>
                         <h2 style="color: black !important;" class="sec-title">Young United Voice for Action: Reimagining Education</h2>
-                        <p>YUVA is a catalytic platform where students from grades 10 to 12 engage in high-order
+                        <p>YUVA is a catalytic platform where students from grades 9 to 12 engage in high-order
                             discourse, articulate visionary ideas, and contribute novel perspectives to the
                             reimagination of learning spaces.</p>
                     </div>
@@ -320,7 +329,7 @@ Partner Area
                                 </div>
                                 <div class="box-content">
                                     <h3 class="box-title"><a style="color: black !important;" href="#">School Registration</a></h3>
-                                    <p class="box-text">Interested schools register their institution to participate in YUVA. Each school forms a team of 4-10 students from grades 10-12 who are passionate about educational innovation and transformation.</p>
+                                    <p class="box-text">Interested schools register their institution to participate in YUVA. Each school forms a team of 4-10 students from grades 9-12 who are passionate about educational innovation and transformation.</p>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +506,7 @@ Partner Area
     <!--==============================
     Team Area  
     ==============================-->
-    <section class="space" id="team-sec" data-bg-src="assets/images/bg3.png">
+    <!-- <section class="space" id="team-sec" data-bg-src="assets/images/bg3.png">
  
         <div class="shape-mockup team-bg-shape3-3 spin d-xxl-block d-none" data-top="15%" data-left="20%">
             <div class="color-masking2">
@@ -528,7 +537,7 @@ Partner Area
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"}}}'>
                     <div class="swiper-wrapper">
 
-                        <!-- Single Item -->
+                        
                         <div class="swiper-slide">
                             <div class="th-team team-card3">
                                 <div class="team-img">
@@ -554,7 +563,7 @@ Partner Area
                             </div>
                         </div>
 
-                        <!-- Single Item -->
+                  
                         <div class="swiper-slide">
                             <div class="th-team team-card3">
                                 <div class="team-img">
@@ -583,7 +592,7 @@ Partner Area
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="space" id="register-sec" >
         <div class="container">
@@ -600,56 +609,52 @@ Partner Area
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-10">
-                    <form id="participationForm" method="POST" class="contact-form">
+                    <form action="register.php" method="post" class="form-wrap">
                         <div class="row">
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" name="full_name" id="full_name"
-                                    placeholder="Full Name*" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Email Address*" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" name="school" id="school_name"
-                                    placeholder="School Name*" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <select class="form-select" name="grade" id="grade" required>
-                                    <option value="" selected disabled>Select Grade*</option>
-                                    <option value="Grade 10">Grade 10</option>
-                                    <option value="Grade 11">Grade 11</option>
-                                    <option value="Grade 12">Grade 12</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="tel" class="form-control" name="phone" id="phone"
-                                    placeholder="Phone Number*" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <select class="form-select" name="topic" id="theme" required>
-                                    <option value="" selected disabled>Select Preferred Theme*</option>
-                                    <option value="Learning Mind">Decoding the Learning Mind</option>
-                                    <option value="Technology">Technological Renaissance in Education</option>
-                                    <option value="Classroom">Reimagining the Classroom Ecosystem</option>
-                                    <option value="Inclusive">Adaptive & Inclusive Learning</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group col-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="terms" required>
-                                    <label class="form-check-label" for="terms">
-                                        I agree to receive communications about YUVA Student Dialogue 2025
-                                    </label>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="school_name" id="school_name" placeholder="School Name*" required>
                                 </div>
                             </div>
-                            <div class="form-btn col-12 text-center">
-                                <button type="submit" class="th-btn">Submit Application <i
-                                        class="fas fa-arrow-up-right ms-2"></i></button>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="city" id="city" placeholder="City*" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="principal_name" id="principal_name" placeholder="Principal Name*" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="principal_email" id="principal_email" placeholder="Principal Email*" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="coordinator_name" id="coordinator_name" placeholder="Teacher Coordinator Name*" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="coordinator_designation" id="coordinator_designation" placeholder="Teacher Coordinator Designation*" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" name="coordinator_phone" id="coordinator_phone" placeholder="Teacher Coordinator Phone*" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="coordinator_email" id="coordinator_email" placeholder="Teacher Coordinator Email*" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="th-btn">Register Now</button>
                             </div>
                         </div>
-                        <div id="formMessages" class="form-messages mb-0 mt-3"></div>
                     </form>
                 </div>
             </div>
@@ -745,7 +750,7 @@ Partner Area
                                 <div id="collapse-1" class="accordion-collapse collapse show"
                                     aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        <p class="faq-text">YUVA is open to students from grades 10 to 12 who are
+                                        <p class="faq-text">YUVA is open to students from grades 9 to 12 who are
                                             passionate about reimagining education. We welcome diverse perspectives,
                                             innovative thinking, and a commitment to intellectual discourse from
                                             students across all educational boards and institutions.</p>
@@ -802,6 +807,88 @@ Partner Area
             </div>
         </div>
     </div>
+    <!-- Teacher Coordination Section -->
+    <div class="teacher-coordination space" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 60px 0;">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title" style="color: #2c5282; font-size: 18px; font-weight: 600; display: block; margin-bottom: 10px;">Regional Coordinators</span>
+                <h2 class="sec-title" style="color: #1a365d; margin-bottom: 40px;">YUVA Regional Coordination Team</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="coordination-list" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                        <div class="coordinator-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative; overflow: hidden;">
+                            <div class="card-header" style="margin-bottom: 20px; position: relative;">
+                                <h4 style="color: #2c5282; margin: 0; font-size: 22px; font-weight: 600;">Pooja</h4>
+                                <div style="position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; background: #2c5282; opacity: 0.1; border-radius: 50%;"></div>
+                            </div>
+                            <div class="card-body">
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-map-marker-alt" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <span>Delhi</span>
+                                </p>
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-phone" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <a href="tel:+917753888063" style="color: #4a5568; text-decoration: none;">+91 77538 88063</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="coordinator-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative; overflow: hidden;">
+                            <div class="card-header" style="margin-bottom: 20px; position: relative;">
+                                <h4 style="color: #2c5282; margin: 0; font-size: 22px; font-weight: 600;">Shvetambri</h4>
+                                <div style="position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; background: #2c5282; opacity: 0.1; border-radius: 50%;"></div>
+                            </div>
+                            <div class="card-body">
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-map-marker-alt" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <span>Vadodara, Kolkata</span>
+                                </p>
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-phone" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <a href="tel:+917697001231" style="color: #4a5568; text-decoration: none;">+91 76970 01231</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="coordinator-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative; overflow: hidden;">
+                            <div class="card-header" style="margin-bottom: 20px; position: relative;">
+                                <h4 style="color: #2c5282; margin: 0; font-size: 22px; font-weight: 600;">Vijeta</h4>
+                                <div style="position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; background: #2c5282; opacity: 0.1; border-radius: 50%;"></div>
+                            </div>
+                            <div class="card-body">
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-map-marker-alt" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <span>Bangalore</span>
+                                </p>
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-phone" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <a href="tel:+919246308588" style="color: #4a5568; text-decoration: none;">+91 92463 08588</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="coordinator-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative; overflow: hidden;">
+                            <div class="card-header" style="margin-bottom: 20px; position: relative;">
+                                <h4 style="color: #2c5282; margin: 0; font-size: 22px; font-weight: 600;">Huma</h4>
+                                <div style="position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; background: #2c5282; opacity: 0.1; border-radius: 50%;"></div>
+                            </div>
+                            <div class="card-body">
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-map-marker-alt" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <span>Gwalior</span>
+                                </p>
+                                <p style="margin: 12px 0; color: #4a5568; font-size: 16px;">
+                                    <i class="fas fa-phone" style="color: #2c5282; margin-right: 10px;"></i>
+                                    <a href="tel:+919026803330" style="color: #4a5568; text-decoration: none;">+91 90268 03330</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Instagram Feed Section -->
     <section class="space bg-smoke">
@@ -840,7 +927,7 @@ Partner Area
                                     <a href="index.html"><img style="width: 140px; height: 110px; " src="assets/images/Logos2.png"
                                             alt="YUVA"></a>
                                 </div>
-                                <p class="about-text mb-3">YUVA is a catalytic platform where students from grades 10 to
+                                <p class="about-text mb-3">YUVA is a catalytic platform where students from grades 9 to
                                     12 engage in high-order discourse, articulate visionary ideas, and contribute novel
                                     perspectives to the reimagination of learning spaces.
                                 </p>
@@ -850,7 +937,7 @@ Partner Area
                                     </div>
                                     <div class="box-content">
                                         <p class="box-text">Contact us:</p>
-                                        <h4 class="box-title"><a style="color: #fff !important;" href="tel:+919876543210">+91 9876543210</a></h4>
+                                        <h4 class="box-title"><a style="color: #fff !important;" href="tel:+9184007 00199">+91 84007 00199</a></h4>
                                     </div>
                                 </div>
                                 <div class="info-card style2">
