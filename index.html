@@ -1080,6 +1080,91 @@ Partner Area
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
 
+    <!-- Add this modal HTML before the closing body tag -->
+    <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="responseModalLabel">Registration Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalMessage">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+        document.getElementById('participationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+            submitBtn.disabled = true;
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Send form data
+            fetch('mail.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Reset button state
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+
+                // Show response in modal
+                const modal = new bootstrap.Modal(document.getElementById('responseModal'));
+                const modalMessage = document.getElementById('modalMessage');
+                
+                if (data.success) {
+                    modalMessage.innerHTML = `
+                        <div class="alert alert-success">
+                            <i class="fas fa-check-circle me-2"></i>
+                            ${data.message}
+                        </div>
+                    `;
+                    // Reset form on success
+                    this.reset();
+                } else {
+                    modalMessage.innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-circle me-2"></i>
+                            ${data.message}
+                        </div>
+                    `;
+                }
+                
+                modal.show();
+            })
+            .catch(error => {
+                // Reset button state
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+
+                // Show error in modal
+                const modal = new bootstrap.Modal(document.getElementById('responseModal'));
+                const modalMessage = document.getElementById('modalMessage');
+                modalMessage.innerHTML = `
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        An error occurred while submitting the form. Please try again.
+                    </div>
+                `;
+                modal.show();
+            });
+        });
+    </script>
+
 </body>
 
 </html>
