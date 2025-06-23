@@ -138,46 +138,62 @@
         }
         @media (max-width: 991px) {
             .host-hero .host-title { font-size: 2rem; }
-            .host-grid { gap: 22px; }
-            .host-card { padding: 24px 14px 18px 14px; }
+            .host-hero { padding: 40px 0 20px 0; }
+            .host-grid { gap: 18px; }
+            .host-card { padding: 18px 8px 14px 8px; }
         }
         @media (max-width: 575px) {
-            .host-hero { padding: 40px 0 20px 0; }
-            .host-hero .host-title { font-size: 1.2rem; }
-            .host-hero .host-intro { font-size: 1rem; }
-            .host-grid-section { padding: 18px 0 30px 0; }
-            .host-card { padding: 14px 7px 12px 7px; }
-            .host-city { font-size: 1.05rem; }
+            .host-hero { padding: 32px 0 18px 0; }
+            .host-hero .host-title { font-size: 1.1rem; margin-bottom: 12px; }
+            .host-hero .host-intro { font-size: 0.98rem; margin-bottom: 18px; }
+            .host-grid-section { padding: 18px 0 28px 0; }
+            .host-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .host-card {
+                padding: 18px 12px 16px 12px;
+                font-size: 0.98rem;
+                border-radius: 16px;
+                margin-bottom: 8px;
+            }
+            .host-city { font-size: 1.05rem; margin-bottom: 4px; }
+            .host-school { font-size: 1.01rem; margin-bottom: 8px; }
+            .host-date { font-size: 0.98rem; }
+            .host-badge { font-size: 0.89rem; padding: 7px 16px 7px 12px; border-radius: 0 0 0 16px; }
+            .host-city-icon { font-size: 1.3rem; margin-right: 10px; }
         }
     </style>
 </head>
 <body>
-    <!-- Header (reuse nav from other pages) -->
+    <!--============================== Mobile Menu ============================== -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"> <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo"> <a href="index.html"><img style=" height: 100px !important;" src="assets/images/Logo.png" alt="YUVA"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about-sec">About YUVA</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about-sec">About YUVA</a></li>
                     <li><a href="venues.html">Host Cities</a></li>
                     <li><a href="hosts_school.html">Host Schools</a></li>
-                    <li><a href="index.html#journey-sec">Yuva Journey</a></li>
-                    <!-- <li><a href="index.html#themes-sec">Themes</a></li> -->
-                    <li><a href="index.html#partner-sec-1">Partner</a></li>
+                    <li><a href="#journey-sec">YUVA Journey</a></li>
+                    <li><a href="#themes-sec">Themes</a></li>
+                    <li><a href="#partner-sec-1">Partner</a></li>
                     <li><a href="topics.html">Topic Guides</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-    <header class="th-header header-layout2">
-        <div class="sticky-wrapper">
+    </div><!--============================== Header Area ==============================-->
+    <header class="th-header header-layout2 onepage-nav">
+        <div class="sticky-wrapper"> <!-- Main Menu Area -->
             <div class="container">
                 <div class="menu-area">
                     <div class="header-logo">
                         <a href="index.html">
-                            <img id="header-logo" style="height: 110px;" src="assets/images/Logo.png" alt="YUVA">
+                            <img id="header-logo" style="height: 110px;" src="assets/images/Logo_white.png" alt="YUVA">
                         </a>
                     </div>
                     <div class="menu-area-wrap">
@@ -190,18 +206,25 @@
                                 <li><a href="index.html#journey-sec">Yuva Journey</a></li>
                                 <!-- <li><a href="index.html#themes-sec">Themes</a></li> -->
                                 <li><a href="index.html#partner-sec-1">Partner</a></li>
-                                <li><a href="topics.html">Topic Guides</a></li>
+                                <li class="active"><a href="topics.html">Topic Guides</a></li>
                             </ul>
                         </nav>
+                        <p class="header-notice"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Join
+                            us to reimagine the future of education</p>
+                    </div>
+                    <div class="header-button">
+                        <a href="#register-sec" class="th-btn style3 d-xl-block d-none"><i
+                                class="fa-solid fa-bolt"></i> Participate Now</a>
+                        <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <section class="host-hero">
-        <br><br><br>
+        <br><br><br><br>
         <div class="container position-relative">
-            <h1 class="host-title">YUVA Host Schools</h1>
+            <h1 style="color: whitesmoke;" class="">YUVA Host Schools</h1>
             <p class="host-intro">Celebrating the institutions that are shaping the future of education by hosting the YUVA Regional Symposia. Each host school is a center of inspiration, innovation, and student empowerment.</p>
         </div>
     </section>
