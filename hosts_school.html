@@ -18,64 +18,136 @@
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .host-section {
-            padding: 80px 0 40px 0;
+        body {
+            background: #f8fafc;
+        }
+        .host-hero {
+            background: linear-gradient(120deg, #7c3aed 0%, #3b82f6 100%);
+            color: #fff;
+            padding: 70px 0 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .host-hero .hero-icon {
+            font-size: 3.5rem;
+            margin-bottom: 18px;
+            color: #fff;
+            opacity: 0.18;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .host-hero .host-title {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .host-hero .host-intro {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 0 auto;
+            color: #e0e7ff;
+            position: relative;
+            z-index: 1;
+        }
+        .host-grid-section {
+            padding: 40px 0 60px 0;
             background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
         }
-        .host-title {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #1e293b;
-            margin-bottom: 18px;
-            letter-spacing: 1px;
-        }
-        .host-intro {
-            font-size: 1.15rem;
-            color: #475569;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
+        .host-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 36px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
         .host-card {
             background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(124,58,237,0.10);
-            margin-bottom: 32px;
-            padding: 32px 32px 24px 32px;
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(124,58,237,0.13);
+            padding: 38px 32px 30px 32px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1e293b;
             position: relative;
-            border-left: 8px solid #7c3aed;
-            transition: box-shadow 0.2s, transform 0.2s;
+            overflow: hidden;
+            transition: box-shadow 0.22s, transform 0.22s;
+            border: none;
         }
         .host-card:hover {
-            box-shadow: 0 16px 40px rgba(124,58,237,0.13);
-            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 16px 48px rgba(59,130,246,0.18);
+            transform: translateY(-6px) scale(1.025);
+        }
+        .host-city-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .host-city-icon {
+            font-size: 2.1rem;
+            margin-right: 14px;
+            opacity: 0.85;
         }
         .host-city {
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             font-weight: 800;
-            color: #7c3aed;
-            margin-bottom: 8px;
-        }
-        .host-school {
-            font-size: 1.15rem;
-            color: #3b82f6;
-            margin-bottom: 6px;
-        }
-        .host-date {
-            font-size: 1.05rem;
-            color: #475569;
             margin-bottom: 0;
         }
-        @media (max-width: 767px) {
-            .host-section { padding: 40px 0 20px 0; }
-            .host-title { font-size: 1.5rem; }
-            .host-card { padding: 18px 12px; font-size: 1rem; }
-            .host-city { font-size: 1.1rem; }
+        .host-card.gwalior .host-city { color: #7c3aed; }
+        .host-card.kolkata .host-city { color: #3b82f6; }
+        .host-card.vadodara .host-city { color: #10b981; }
+        .host-card.gwalior .host-city-icon { color: #7c3aed; }
+        .host-card.kolkata .host-city-icon { color: #3b82f6; }
+        .host-card.vadodara .host-city-icon { color: #10b981; }
+        .host-school {
+            font-size: 1.18rem;
+            color: #1e293b;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 2px;
+        }
+        .host-date {
+            font-size: 1.08rem;
+            color: #475569;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+        .host-date i {
+            color: #7c3aed;
+            margin-right: 8px;
+        }
+        .host-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(90deg, #7c3aed 60%, #3b82f6 100%);
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 7px 22px 7px 18px;
+            border-radius: 0 0 0 22px;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 12px rgba(124,58,237,0.10);
+        }
+        @media (max-width: 991px) {
+            .host-hero .host-title { font-size: 2rem; }
+            .host-grid { gap: 22px; }
+            .host-card { padding: 24px 14px 18px 14px; }
+        }
+        @media (max-width: 575px) {
+            .host-hero { padding: 40px 0 20px 0; }
+            .host-hero .host-title { font-size: 1.2rem; }
+            .host-hero .host-intro { font-size: 1rem; }
+            .host-grid-section { padding: 18px 0 30px 0; }
+            .host-card { padding: 14px 7px 12px 7px; }
+            .host-city { font-size: 1.05rem; }
         }
     </style>
 </head>
@@ -126,29 +198,42 @@
             </div>
         </div>
     </header>
-    <section class="host-section">
+    <section class="host-hero mt-50">
+        <div class="hero-icon"><i class="fas fa-school"></i></div>
+        <div class="container position-relative">
+            <h1 class="host-title">YUVA Host Schools</h1>
+            <p class="host-intro">Celebrating the institutions that are shaping the future of education by hosting the YUVA Regional Symposia. Each host school is a center of inspiration, innovation, and student empowerment.</p>
+        </div>
+    </section>
+    <section class="host-grid-section">
         <div class="container">
-            <div class="text-center mb-5 mt-50">
-                <h1 class="host-title">YUVA Host Schools</h1>
-                <p class="host-intro">These are the esteemed host schools for the YUVA Regional Symposia. Each school is a beacon of educational excellence, providing a vibrant platform for student dialogue and innovation.</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-10">
-                    <div class="host-card">
-                        <div class="host-city">Gwalior</div>
-                        <div class="host-school">LITTLE ANGEL HIGH SCHOOL, GWALIOR</div>
-                        <div class="host-date"><i class="fas fa-calendar-alt me-2"></i>2 August 2025</div>
+            <div class="host-grid">
+                <div class="host-card gwalior">
+                    <div class="host-badge">Confirmed</div>
+                    <div class="host-city-row">
+                        <span class="host-city-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="host-city">Gwalior</span>
                     </div>
-                    <div class="host-card">
-                        <div class="host-city">Kolkata</div>
-                        <div class="host-school">SPK Jain Futuristic Academy, Kadampukur, WB</div>
-                        <div class="host-date"><i class="fas fa-calendar-alt me-2"></i>12 August 2025</div>
+                    <div class="host-school">LITTLE ANGEL HIGH SCHOOL, GWALIOR</div>
+                    <div class="host-date"><i class="fas fa-calendar-alt"></i> 2 August 2025</div>
+                </div>
+                <div class="host-card kolkata">
+                    <div class="host-badge">Confirmed</div>
+                    <div class="host-city-row">
+                        <span class="host-city-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="host-city">Kolkata</span>
                     </div>
-                    <div class="host-card">
-                        <div class="host-city">Vadodara</div>
-                        <div class="host-school">Amicus International School, Vadodara</div>
-                        <div class="host-date"><i class="fas fa-calendar-alt me-2"></i>Date: Yet to be shared</div>
+                    <div class="host-school">SPK Jain Futuristic Academy, Kadampukur, WB</div>
+                    <div class="host-date"><i class="fas fa-calendar-alt"></i> 12 August 2025</div>
+                </div>
+                <div class="host-card vadodara">
+                    <div class="host-badge" style="background: linear-gradient(90deg, #10b981 60%, #3b82f6 100%);">Awaiting Date</div>
+                    <div class="host-city-row">
+                        <span class="host-city-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="host-city">Vadodara</span>
                     </div>
+                    <div class="host-school">Amicus International School, Vadodara</div>
+                    <div class="host-date"><i class="fas fa-calendar-alt"></i> Date: Yet to be shared</div>
                 </div>
             </div>
         </div>
