@@ -87,6 +87,174 @@
     .topic-list li:nth-child(5n+5) {
         border-left-color: #9c77ff;
     }
+    /* YUVA Entry Topics Section Styles */
+    .yuva-grand-section {
+        padding: 80px 0;
+        background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    .yuva-grand-section::before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, #7c3aed33 0%, transparent 80%);
+        z-index: 0;
+        animation: float1 8s ease-in-out infinite alternate;
+    }
+    .yuva-grand-section::after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        right: -100px;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(circle, #3b82f633 0%, transparent 80%);
+        z-index: 0;
+        animation: float2 10s ease-in-out infinite alternate;
+    }
+    @keyframes float1 {
+        0% { transform: translateY(0) scale(1); }
+        100% { transform: translateY(30px) scale(1.08); }
+    }
+    @keyframes float2 {
+        0% { transform: translateY(0) scale(1); }
+        100% { transform: translateY(-30px) scale(1.05); }
+    }
+    .yuva-grand-section .container {
+        position: relative;
+        z-index: 1;
+    }
+    .yuva-grand-title {
+        font-size: 3.2rem;
+        font-weight: 900;
+        color: #1e293b;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        text-shadow: 0 4px 24px rgba(124,58,237,0.08);
+    }
+    .yuva-grand-lead {
+        font-size: 1.25rem;
+        color: #475569;
+        max-width: 600px;
+        margin: 0 auto 40px auto;
+    }
+    .yuva-grand-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .yuva-grand-list li {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(124,58,237,0.10);
+        margin-bottom: 32px;
+        padding: 32px 40px;
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #7c3aed;
+        position: relative;
+        transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+    }
+    .yuva-grand-list li:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 36px rgba(124,58,237,0.13);
+    }
+    .yuva-grand-list li .yuva-grand-num {
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 900;
+        margin-right: 32px;
+        box-shadow: 0 2px 12px rgba(124,58,237,0.15);
+        flex-shrink: 0;
+    }
+    .yuva-grand-list li:nth-child(1) {
+        color: #7c3aed;
+    }
+    .yuva-grand-list li:nth-child(1) .yuva-grand-num {
+        background: #7c3aed;
+        color: #fff;
+    }
+    .yuva-grand-list li:nth-child(2) {
+        color: #10b981;
+    }
+    .yuva-grand-list li:nth-child(2) .yuva-grand-num {
+        background: #10b981;
+        color: #fff;
+    }
+    .yuva-grand-list li:nth-child(3) {
+        color: #3b82f6;
+    }
+    .yuva-grand-list li:nth-child(3) .yuva-grand-num {
+        background: #3b82f6;
+        color: #fff;
+    }
+    .yuva-grand-list li:nth-child(4) {
+        color: #eab308;
+    }
+    .yuva-grand-list li:nth-child(4) .yuva-grand-num {
+        background: #eab308;
+        color: #fff;
+    }
+    .yuva-grand-list li:nth-child(5) {
+        color: #ef4444;
+    }
+    .yuva-grand-list li:nth-child(5) .yuva-grand-num {
+        background: #ef4444;
+        color: #fff;
+    }
+    /* Responsive Styles */
+    @media (max-width: 991px) {
+        .yuva-grand-title {
+            font-size: 2.2rem;
+        }
+        .yuva-grand-list li {
+            font-size: 1.3rem;
+            padding: 24px 18px;
+        }
+        .yuva-grand-list li .yuva-grand-num {
+            width: 44px;
+            height: 44px;
+            font-size: 1.3rem;
+            margin-right: 18px;
+        }
+    }
+    @media (max-width: 575px) {
+        .yuva-grand-section {
+            padding: 40px 0 30px 0;
+        }
+        .yuva-grand-title {
+            font-size: 1.3rem;
+        }
+        .yuva-grand-lead {
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .yuva-grand-list li {
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 1.05rem;
+            padding: 18px 10px;
+            text-align: left;
+        }
+        .yuva-grand-list li .yuva-grand-num {
+            margin-right: 0;
+            margin-bottom: 10px;
+            width: 38px;
+            height: 38px;
+            font-size: 1rem;
+        }
+    }
 </style>
     <!--==============================
 Google Fonts
@@ -176,36 +344,21 @@ All CSS File
     </div>
 
     <!-- Grand YUVA Entry Topics Section -->
-    <section class="space" style="padding: 80px 0; background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);">
+    <section class="yuva-grand-section">
         <div class="container">
             <div class="text-center mb-5">
-                <span style="display: inline-block; font-size: 1.3rem; color: #7c3aed; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Welcome to</span>
-                <h1 style="font-size: 3.2rem; font-weight: 900; color: #1e293b; margin-bottom: 20px; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(124,58,237,0.08);">YUVA Entry Topics</h1>
-                <p style="font-size: 1.25rem; color: #475569; max-width: 600px; margin: 0 auto 40px auto;">Dive into the most exciting and impactful themes for the YUVA Student Dialogue. These topics are designed to spark your imagination and inspire your vision for the future!</p>
+                <span style="display: inline-block; font-size: 1.1rem; color: #7c3aed; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Welcome to</span>
+                <h1 class="yuva-grand-title">YUVA Entry Topics</h1>
+                <p class="yuva-grand-lead">Dive into the most exciting and impactful themes for the YUVA Student Dialogue. These topics are designed to spark your imagination and inspire your vision for the future!</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <ol style="list-style: none; padding: 0; margin: 0;">
-                        <li style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(124,58,237,0.10); margin-bottom: 32px; padding: 32px 40px; display: flex; align-items: center; font-size: 2rem; font-weight: 700; color: #7c3aed; position: relative;">
-                            <span style="background: #7c3aed; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin-right: 32px; box-shadow: 0 2px 12px rgba(124,58,237,0.15);">1</span>
-                            Innovation in Education
-                        </li>
-                        <li style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(16,185,129,0.10); margin-bottom: 32px; padding: 32px 40px; display: flex; align-items: center; font-size: 2rem; font-weight: 700; color: #10b981; position: relative;">
-                            <span style="background: #10b981; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin-right: 32px; box-shadow: 0 2px 12px rgba(16,185,129,0.15);">2</span>
-                            Ethics & Technology
-                        </li>
-                        <li style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(59,130,246,0.10); margin-bottom: 32px; padding: 32px 40px; display: flex; align-items: center; font-size: 2rem; font-weight: 700; color: #3b82f6; position: relative;">
-                            <span style="background: #3b82f6; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin-right: 32px; box-shadow: 0 2px 12px rgba(59,130,246,0.15);">3</span>
-                            Digital Citizenship
-                        </li>
-                        <li style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(234,179,8,0.10); margin-bottom: 32px; padding: 32px 40px; display: flex; align-items: center; font-size: 2rem; font-weight: 700; color: #eab308; position: relative;">
-                            <span style="background: #eab308; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin-right: 32px; box-shadow: 0 2px 12px rgba(234,179,8,0.15);">4</span>
-                            Values & Leadership
-                        </li>
-                        <li style="background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(239,68,68,0.10); margin-bottom: 0; padding: 32px 40px; display: flex; align-items: center; font-size: 2rem; font-weight: 700; color: #ef4444; position: relative;">
-                            <span style="background: #ef4444; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin-right: 32px; box-shadow: 0 2px 12px rgba(239,68,68,0.15);">5</span>
-                            Social Impact
-                        </li>
+                    <ol class="yuva-grand-list">
+                        <li><span class="yuva-grand-num">1</span>Innovation in Education</li>
+                        <li><span class="yuva-grand-num">2</span>Ethics & Technology</li>
+                        <li><span class="yuva-grand-num">3</span>Digital Citizenship</li>
+                        <li><span class="yuva-grand-num">4</span>Values & Leadership</li>
+                        <li><span class="yuva-grand-num">5</span>Social Impact</li>
                     </ol>
                 </div>
             </div>
