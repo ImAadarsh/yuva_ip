@@ -255,6 +255,140 @@
             font-size: 1rem;
         }
     }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+    .topic-guides-section-bg {
+        background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+        position: relative;
+        padding: 80px 0 60px 0;
+        overflow: hidden;
+    }
+    .topic-guides-section-bg::before {
+        content: '';
+        position: absolute;
+        top: -60px; left: -60px;
+        width: 320px; height: 320px;
+        background: radial-gradient(circle, #7c3aed22 0%, transparent 80%);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .topic-guides-section-bg::after {
+        content: '';
+        position: absolute;
+        bottom: -80px; right: -80px;
+        width: 340px; height: 340px;
+        background: radial-gradient(circle, #3b82f622 0%, transparent 80%);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .topic-card-adv {
+        background: #fff;
+        border-radius: 28px;
+        box-shadow: 0 8px 48px rgba(124,58,237,0.13);
+        margin-bottom: 48px;
+        min-height: 340px;
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow 0.25s, transform 0.25s;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        padding: 56px 48px 40px 48px;
+    }
+    .topic-card-adv:hover {
+        box-shadow: 0 16px 48px rgba(124,58,237,0.18);
+        transform: translateY(-10px) scale(1.03);
+    }
+    .topic-card-adv .card-header {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding: 0 0 0 0;
+        background: none;
+        border: none;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
+    }
+    .topic-card-adv .icon-wrap {
+        width: 80px; height: 80px;
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2.8rem;
+        box-shadow: 0 2px 18px rgba(124,58,237,0.13);
+        transition: transform 0.25s;
+    }
+    .topic-card-adv:hover .icon-wrap {
+        transform: scale(1.15) rotate(-8deg);
+    }
+    .topic-card-adv .topic-title {
+        font-family: 'Montserrat', 'Nunito Sans', Arial, sans-serif;
+        font-size: 2rem;
+        font-weight: 900;
+        color: #1e293b;
+        margin-bottom: 4px;
+        letter-spacing: 0.5px;
+    }
+    .topic-card-adv .topic-subtitle {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        color: var(--topic-accent, #7c3aed);
+    }
+    .topic-card-adv .gradient-bar {
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 14px;
+        border-radius: 14px 0 0 14px;
+        z-index: 1;
+    }
+    .topic-card-adv .divider {
+        height: 3px;
+        width: 60px;
+        background: linear-gradient(90deg, var(--topic-accent, #7c3aed), #e0e7ff 80%);
+        border-radius: 2px;
+        margin: 24px 0 18px 0;
+    }
+    .topic-card-adv .topic-desc {
+        color: #475569;
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+    }
+    .topic-card-adv ul {
+        margin: 0 0 18px 0;
+        padding-left: 28px;
+        color: var(--topic-accent, #7c3aed);
+        font-size: 1.08rem;
+    }
+    .topic-card-adv .cta-btn {
+        margin-top: 24px;
+        align-self: flex-start;
+        background: linear-gradient(90deg, var(--topic-accent, #7c3aed), #a5b4fc 90%);
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        border-radius: 12px;
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        box-shadow: 0 2px 8px rgba(124,58,237,0.08);
+        transition: background 0.2s, box-shadow 0.2s;
+        text-decoration: none;
+    }
+    .topic-card-adv .cta-btn:hover {
+        background: linear-gradient(90deg, #fff, var(--topic-accent, #7c3aed) 90%);
+        color: var(--topic-accent, #7c3aed);
+        box-shadow: 0 4px 16px rgba(124,58,237,0.13);
+    }
+    @media (max-width: 991px) {
+        .topic-card-adv { min-height: 0; padding: 32px 16px 28px 16px; }
+        .topic-card-adv .card-header { gap: 18px; }
+        .topic-card-adv .icon-wrap { width: 54px; height: 54px; font-size: 1.7rem; }
+        .topic-card-adv .topic-title { font-size: 1.3rem; }
+    }
+    @media (max-width: 575px) {
+        .topic-guides-section-bg { padding: 24px 0 10px 0; }
+        .topic-card-adv { padding: 14px 4px 14px 4px; }
+        .topic-card-adv .card-header { gap: 10px; }
+    }
 </style>
     <!--==============================
 Google Fonts
@@ -292,14 +426,22 @@ All CSS File
             </div>
             <div class="th-mobile-menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about-sec">About YUVA</a></li>
-                    <li><a href="venues.html">Host Cities</a></li>
-                    <li><a href="hosts_school.html">Host Schools</a></li>
-                    <li><a href="index.html#journey-sec">Yuva Journey</a></li>
-                     <!-- <li><a href="index.html#themes-sec">Themes</a></li> -->
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li class="menu-item-has-children"><a href="index.html#about-sec">About YUVA</a>
+                        <ul class="sub-menu">
+                            <li><a href="topics.html">Topic Guides</a></li>
+                            <li><a href="index.html#journey-sec">YUVA Journey</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="YUVA _faq_guidlines_2025.pdf">Faq & Guidlines</a></li>
+                    <li class="menu-item-has-children"><a href="#">Hosts</a>
+                        <ul class="sub-menu">
+                            <li><a href="venues.html">Host Cities</a></li>
+                            <li><a href="hosts_school.html">Host Schools</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="#themes-sec">Themes</a></li> -->
                     <li><a href="index.html#partner-sec-1">Partner</a></li>
-                    <li><a href="topics.html">Topic Guides</a></li>
                 </ul>
             </div>
         </div>
@@ -316,14 +458,22 @@ All CSS File
                     <div class="menu-area-wrap">
                         <nav class="main-menu d-none d-lg-block">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="index.html#about-sec">About YUVA</a></li>
-                                <li><a href="venues.html">Host Cities</a></li>
-                                <li><a href="hosts_school.html">Host Schools</a></li>
-                                <li><a href="index.html#journey-sec">Yuva Journey</a></li>
-                                 <!-- <li><a href="index.html#themes-sec">Themes</a></li> -->
+                                <li><a href="index.html#hero">Home</a></li>
+                                <li class="menu-item-has-children"><a href="index.html#about-sec">About YUVA</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="topics.html">Topic Guides</a></li>
+                                        <li><a href="index.html#journey-sec">YUVA Journey</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="YUVA _faq_guidlines_2025.pdf">Faq & Guidlines</a></li>
+                                <li class="menu-item-has-children"><a href="#">Hosts</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="venues.html">Host Cities</a></li>
+                                        <li><a href="hosts_school.html">Host Schools</a></li>
+                                    </ul>
+                                </li>
+                                <!-- <li><a href="#themes-sec">Themes</a></li> -->
                                 <li><a href="index.html#partner-sec-1">Partner</a></li>
-                                <li class="active"><a href="topics.html">Topic Guides</a></li>
                             </ul>
                         </nav>
                         <p class="header-notice"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Join
@@ -345,28 +495,124 @@ All CSS File
 
     </div>
 
-    <!-- Grand YUVA Entry Topics Section -->
-    <section class="yuva-grand-section">
+    <!-- Enhanced Topic Guides Section -->
+    <section class="topic-guides-section-bg">
         <div class="container">
             <div class="text-center mb-5">
                 <span style="display: inline-block; font-size: 1.1rem; color: #7c3aed; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Welcome to</span>
-                <h1 class="yuva-grand-title">YUVA Entry Topics</h1>
+                <h1 class="yuva-grand-title" style="font-family:'Montserrat',sans-serif;">YUVA Entry Topics</h1>
                 <p class="yuva-grand-lead">Dive into the most exciting and impactful themes for the YUVA Student Dialogue. These topics are designed to spark your imagination and inspire your vision for the future!</p>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <ol class="yuva-grand-list">
-                        <li><span class="yuva-grand-num">1</span>Innovation in Education</li>
-                        <li><span class="yuva-grand-num">2</span>Ethics & Technology</li>
-                        <li><span class="yuva-grand-num">3</span>Digital Citizenship</li>
-                        <li><span class="yuva-grand-num">4</span>Values & Leadership</li>
-                        <li><span class="yuva-grand-num">5</span>Social Impact</li>
-                    </ol>
+                <div class="col-12">
+                    <div class="topic-card-adv" style="--topic-accent:#7c3aed;">
+                        <div class="gradient-bar" style="background:linear-gradient(180deg,#7c3aed,#a5b4fc);"></div>
+                        <div class="card-header">
+                            <span class="icon-wrap" style="background:#7c3aed;">🤖</span>
+                            <div>
+                                <div class="topic-title">Innovation in Education</div>
+                                <div class="topic-subtitle">How AI Can Transform the Classroom Experience</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="topic-desc">Explore how Artificial Intelligence can enhance learning, personalize education, support teachers, and revolutionize student engagement.</div>
+                        <ul>
+                            <li>Smart tutors</li>
+                            <li>Adaptive learning</li>
+                            <li>AI vs human touch</li>
+                            <li>Future-ready classrooms</li>
+                        </ul>
+                        <a class="cta-btn" href="index.html#register-sec">Register Now</a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="topic-card-adv" style="--topic-accent:#10b981;">
+                        <div class="gradient-bar" style="background:linear-gradient(180deg,#10b981,#6ee7b7);"></div>
+                        <div class="card-header">
+                            <span class="icon-wrap" style="background:#10b981;">🤖</span>
+                            <div>
+                                <div class="topic-title">Ethics & Technology</div>
+                                <div class="topic-subtitle">Should Robots Be Allowed to Replace Humans in Jobs?</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="topic-desc">Delve into the moral, economic, and social implications of automation.</div>
+                        <ul>
+                            <li>Job displacement vs efficiency</li>
+                            <li>Human dignity</li>
+                            <li>Ethical design</li>
+                            <li>Coexistence models</li>
+                        </ul>
+                        <a class="cta-btn" href="index.html#register-sec">Register Now</a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="topic-card-adv" style="--topic-accent:#3b82f6;">
+                        <div class="gradient-bar" style="background:linear-gradient(180deg,#3b82f6,#93c5fd);"></div>
+                        <div class="card-header">
+                            <span class="icon-wrap" style="background:#3b82f6;">🌐</span>
+                            <div>
+                                <div class="topic-title">Digital Citizenship</div>
+                                <div class="topic-subtitle">What Does It Mean to Be a Responsible Digital Citizen?</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="topic-desc">Define and illustrate responsible behavior in the digital age.</div>
+                        <ul>
+                            <li>Online etiquette</li>
+                            <li>Cyberbullying</li>
+                            <li>Data privacy</li>
+                            <li>Critical thinking on social media</li>
+                        </ul>
+                        <a class="cta-btn" href="index.html#register-sec">Register Now</a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="topic-card-adv" style="--topic-accent:#eab308;">
+                        <div class="gradient-bar" style="background:linear-gradient(180deg,#eab308,#fde68a);"></div>
+                        <div class="card-header">
+                            <span class="icon-wrap" style="background:#eab308;">⭐</span>
+                            <div>
+                                <div class="topic-title">Values & Leadership</div>
+                                <div class="topic-subtitle">What Makes a Good Leader in School and Life?</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="topic-desc">Discuss the traits, values, and habits that define strong, ethical, and empathetic leadership.</div>
+                        <ul>
+                            <li>Real-life inspirations</li>
+                            <li>Student leadership</li>
+                            <li>Moral courage</li>
+                            <li>Leading by example</li>
+                        </ul>
+                        <a class="cta-btn" href="index.html#register-sec">Register Now</a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="topic-card-adv" style="--topic-accent:#ef4444;">
+                        <div class="gradient-bar" style="background:linear-gradient(180deg,#ef4444,#fca5a5);"></div>
+                        <div class="card-header">
+                            <span class="icon-wrap" style="background:#ef4444;">🌍</span>
+                            <div>
+                                <div class="topic-title">Social Impact</div>
+                                <div class="topic-subtitle">What Social Issue Would You Solve If Given the Power?</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="topic-desc">Imagine being given the authority to solve one major issue—what would it be and how would you approach it?</div>
+                        <ul>
+                            <li>Education inequality</li>
+                            <li>Climate change</li>
+                            <li>Gender justice</li>
+                            <li>Mental health</li>
+                        </ul>
+                        <a class="cta-btn" href="index.html#register-sec">Register Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Grand YUVA Entry Topics Section -->
+    <!-- End Enhanced Topic Guides Section -->
 
     <!--==============================
     Footer Area
