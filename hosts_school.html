@@ -84,6 +84,19 @@
             box-shadow: 0 16px 48px rgba(59,130,246,0.18);
             transform: translateY(-6px) scale(1.025);
         }
+        .host-card img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            height: auto;
+            max-height: 240px;
+            min-height: 240px;
+            object-fit: cover;
+            border-radius: 0px;
+            margin-bottom: 0px;
+            box-shadow: 0 0px 0px rgba(124,58,237,0.10);
+            background: #e0e7ff;
+            display: block;
+        }
         .host-city-row {
             display: flex;
             align-items: center;
@@ -154,7 +167,7 @@
                 padding: 0 10px;
             }
             .host-card {
-                padding: 18px 12px 16px 12px;
+                padding: 3px 3px 6px 4px;
                 font-size: 0.98rem;
                 border-radius: 16px;
                 margin-bottom: 8px;
@@ -248,6 +261,7 @@
         <div class="container">
             <div class="host-grid">
                 <div class="host-card gwalior">
+                    <img style="height: 1080px !important; width: 1080px !important;" src="host_school/gwalior.jpeg" alt="Gwalior Host School">
                     <div class="host-badge">Scheduled</div>
                     <div class="host-city-row">
                         <span class="host-city-icon"><i class="fas fa-map-marker-alt"></i></span>
@@ -257,6 +271,7 @@
                     <div class="host-date"><i class="fas fa-calendar-alt"></i> 2 August 2025</div>
                 </div>
                 <div class="host-card kolkata">
+                    <img src="host_school/kolkata.jpeg" alt="Kolkata Host School">
                     <div class="host-badge">Scheduled</div>
                     <div class="host-city-row">
                         <span class="host-city-icon"><i class="fas fa-map-marker-alt"></i></span>
@@ -266,6 +281,7 @@
                     <div class="host-date"><i class="fas fa-calendar-alt"></i> 12 August 2025</div>
                 </div>
                 <div class="host-card vadodara">
+                    <img src="host_school/vadodara.jpeg" alt="Vadodara Host School">
                     <div class="host-badge" style="background: linear-gradient(90deg, #10b981 60%, #3b82f6 100%);">Awaiting Date</div>
                     <div class="host-city-row">
                         <span class="host-city-icon"><i class="fas fa-map-marker-alt"></i></span>
